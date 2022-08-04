@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #parent{
+            text-align: center;
+            margin-left: 350px;
+            margin-top: 100px;
+            background-color: rgb(52, 214, 214);
+            width: 800px;
+            padding: 30px;
+            
+        }
+     .A{
+        padding: 20px;
+        display: inline-block;
+     }
+    </style>
+</head>
+<body>
+       <div class="Q" id="parent">
+           <div class="A" id="AA">
+                 <label>Meter</label>
+                 <input  type="text" value="1" id="M" >
+           </div>
+           <div class="A" id="BB">
+                 <label>Kilometer</label>
+                 <input id="K" type="number" value="0">
+           </div>
+        </div>
+
+        <script>
+        let Meter=document.getElementById("M");
+        let BB=document.getElementById("K");
+        Meter.addEventListener('input',function (){
+              let y=this.value;
+              y=y/1000;
+              BB.value=y;
+        });
+
+        BB.addEventListener('input',function (){
+              let j=this.value;
+              j=j*1000;
+              Meter.value=j;
+        })
+        </script>
+</body>
+</html>
